@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../book-service/book-service.iml" filepath="$PROJECT_DIR$/../book-service/book-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cambio-service/cambio-service.iml" filepath="$PROJECT_DIR$/../cambio-service/cambio-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../greeting-service/greeting-service.iml" filepath="$PROJECT_DIR$/../greeting-service/greeting-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../config-server/greeting-service (1) (com.erudio).iml" filepath="$PROJECT_DIR$/../config-server/greeting-service (1) (com.erudio).iml" />
+    </modules>
+  </component>
+</project>

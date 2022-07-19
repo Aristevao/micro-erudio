@@ -1,18 +1,14 @@
 package com.erudio.controller;
 
-import com.erudio.BookRepository;
-import com.erudio.CambioProxy;
+import com.erudio.repository.BookRepository;
+import com.erudio.proxy.CambioProxy;
 import com.erudio.model.Book;
-import com.erudio.response.Cambio;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
-
-import java.util.HashMap;
 
 @RequiredArgsConstructor
 @RestController
@@ -33,7 +29,7 @@ public class BookController {
         var cambio = proxy.getCambio(book.getPrice(), "USD", currency);
 
         var port = environment.getProperty("local.server.port");
-        book.setEnvironment(port + " Feign");
+        book.setEnvironment("Book port: " + port + " Cambio port: " + cambio.getEnvironment());
         book.setPrice(cambio.getConvertedValue());
         return book;
     }
